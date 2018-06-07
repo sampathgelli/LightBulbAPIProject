@@ -19,9 +19,7 @@ Following software to be installed
 How to execute the tests
 
 ```
-qantas {{environment_name}}
-
-qantas dev
+mvn clean verify test
 ```
 
 ## Authors
