@@ -4,28 +4,28 @@ Feature: I want to turn on and off my light
   I want to Switch on and Switch off buld
   So that I use light when it is required
 
-  @Success
+  
   Scenario Outline: Successful Scenario for light on and off
     Given lightbulb application url
     When user request to switch "<state>"
     Then I should get response "<statuscode>"
     And Result should be "<Result>"
 
-  @prod
+  @WIP
     Examples: Valid Data
       | state | statuscode | Result                  |
       | on    | 200        | Switch set successfully |
       | off   | 200        | Switch set successfully |
       | off   | 200        | Switch set successfully |
 
-  @Power
+  
   Scenario Outline: Unsuccessful Scenario for light on and off
     Given lightbulb application url
     When user request to switch "<state>" and power as "<power>"
     Then I should get response "<statuscode>"
     And Result should be "<Result>"
 
-  @SIT
+  @WIP
     Examples: Valid Data
       | state | statuscode | Result                                 | power |
       | on    | 200        | Switch & custom power set successfully | 10    |

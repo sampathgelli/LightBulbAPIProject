@@ -13,24 +13,6 @@ public class LightBulbStepDef extends GenericDeclarationClass {
     @Steps
     LightBulbSteps geoCodeSteps;
 
-    @Given("^I have an \"([^\"]*)\"$")
-    public void i_have_an_something(String address) throws Throwable {
-        //geoCodeSteps.saveAddress(address);
-        throw new PendingException();
-    }
-
-    @When("^I request google api for geocode with address$")
-    public void i_request_google_api_for_geocode_with_address() throws Throwable {
-        //geoCodeSteps.requestGeoCodeWithAddress();
-        throw new PendingException();
-    }
-
-    @Given("^I have username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
-    public void i_have_username_as_something_and_password_as_something(String userName, String password) throws Throwable {
-        //throw new PendingException();
-        geoCodeSteps.saveAddress(userName, password);
-
-    }
 
     @Then("^I should get response \"([^\"]*)\"$")
     public void i_should_get_response_something(String statuscode) throws Throwable {
@@ -55,7 +37,6 @@ public class LightBulbStepDef extends GenericDeclarationClass {
 
     @And("^Result should be \"([^\"]*)\"$")
     public void result_should_be_something(String result) throws Throwable {
-       // throw new PendingException();
         geoCodeSteps.validateResult(result);
     }
 }
