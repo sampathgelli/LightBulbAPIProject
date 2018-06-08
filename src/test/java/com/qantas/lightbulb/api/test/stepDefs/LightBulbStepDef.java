@@ -13,6 +13,11 @@ public class LightBulbStepDef extends GenericDeclarationClass {
     @Steps
     LightBulbSteps geoCodeSteps;
 
+    @Given("^I have username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
+    public void i_have_username_as_something_and_password_as_something(String userName, String password) throws Throwable {
+        geoCodeSteps.saveAddress(userName, password);
+
+    }
 
     @Then("^I should get response \"([^\"]*)\"$")
     public void i_should_get_response_something(String statuscode) throws Throwable {

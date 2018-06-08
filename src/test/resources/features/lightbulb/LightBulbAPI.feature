@@ -30,5 +30,3 @@ Feature: I want to turn on and off my light
       | state | statuscode | Result                                 | power |
       | on    | 200        | Switch & custom power set successfully | 10    |
       | on    | 200        | Switch & custom power set successfully | 60    |
-      | on    | 200        | Switch & custom power set successfully | 20    |
-      | on    | 200        | Switch & custom power set successfully | -50   |
